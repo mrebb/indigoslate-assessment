@@ -3,7 +3,7 @@ Thank you for taking the time to complete the Indigo Slate Engineering Team's fu
 Feel free to spend as much or as little time as you'd like. Although we strongly suggest not taking more than 4 hours of your time.
 
 ## Data API
-You should not create your own data tier for this project. A data storage api has been provided for you, please reference this [api documentation]:(api-doc/data-tier.md). \\
+You should not create your own data tier for this project. A data storage api has been provided for you, please reference this [api documentation]:(api-doc/data-tier.md). \
 **API_KEY is required**: If you do not already have an API key, please reach out to your contact at Indigo Slate to receive one.
 
 # Assessment Scenario
