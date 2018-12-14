@@ -2,6 +2,7 @@
   "name": "event_admin",
   "version": "0.1.0",
   "private": true,
+  "repository":"https://github.com/IndigoSlate/assessment__new-hire--app-dev",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
