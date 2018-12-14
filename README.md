@@ -31,17 +31,19 @@ Build the event management application for this client. The client wants to be a
 **If you have any additional questions about the application please reach out to your recruiter.**
 
 
-# Front-end framework
+# Front-end framework (this repository)
 
 ## Project setup
+* Clone this repository
+* Install dependencies
 ```
 npm install
 ```
-### Compiles and hot-reloads for development
+### Getting Started
 ```
+// serve for development
 npm run serve
-```
-### Compiles and minifies for production
-```
+
+// Compiles and minifies for production
 npm run build
 ```
