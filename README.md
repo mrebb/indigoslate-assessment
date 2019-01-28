@@ -15,9 +15,10 @@ Build the event management application for this client. The client wants to be a
 * **Create an Event API back-end**, providing endpoints for data manipulation for the view.
     * This API will be separate from the data storage api provided.
 * **Utilize the provided CRUD storage API as the data tier** for the Event API backend. ([api documentation](api-doc/data-tier.md))
+    * Hint: Depending on how you structure your data, you may not need to use all of the provided endpoints!
 * Events should **not** overlap.
 * The schedule should span across 3 days.
-* Authenticate the Admin View to the Event API using Basic Authentication.
+* Authenticate the Admin View to the Event API using Basic Authentication (Only a single set of credentials is necessary).
 * We've provided a partial front-end to help you get started.
 
 ## Notes
