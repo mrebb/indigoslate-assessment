@@ -1,9 +1,9 @@
 <template>
     <div class='calendar__day'>
-        <div class='title'>
-            {{ dateObj.toDateString() }}
+        <div class='title'> {{ dateObj.toDateString() }} </div>
+        <div class='events'>
+            <Event v-for="eventItem in eventList" :thisEvent="eventItem" :key="eventItem.id" />
         </div>
-        <Event v-for="eventItem in eventList" :thisEvent="eventItem" :key="eventItem.id" />
     </div>
 </template>
 
@@ -17,33 +17,31 @@ export default {
         dateTime: String,
         eventList: Array
     },
-    date: () => {
-        return {
-            dateObj: null
-        }
-    },
     components: {
         Event
     },
-    created: function() {
-        this.dateObj = new Date( Date.parse( this.dateTime ) )
+    computed: {
+        dateObj() {
+            return new Date( Date.parse( this.dateTime || 0 ) )
+        }
     }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-div.calendar__day {
-    width: 100%;
-    padding: 0 0 1em;
-    &:nth-child(even) {
-        background-color: #ECECEC;
+    div.calendar__day {
+        margin:1em 0;
+        text-align:left;
+        .title{
+            padding: .5em 0 .5em 1em;
+            margin-bottom: 1em;
+            text-align: left;
+            background-color: rgba( 0, 0, 0, .125 );
+            font-weight: bold;
+        }
+        .events {
+            display:flex;
+            flex-wrap:wrap;
+        }
     }
-    .title{
-        text-align: left;
-        padding: 1em;
-        background-color: rgba( 0, 0, 0, .25 );
-        font-weight: bold;
-    }
-}
 </style>

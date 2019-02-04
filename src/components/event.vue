@@ -1,13 +1,17 @@
 <template>
-    <dl class='event'>
-        <dt class='event__title'>Name:</dt><dd>{{ thisEvent.name || 'n/a' }}</dd>
-        <dt class='event__date'>Date:</dt><dd>{{ jsDate.toLocaleDateString() || 'n/a' }}</dd>
-        <dt class='event__date--time'>Time:</dt><dd>{{ jsDate.toLocaleTimeString() || 'n/a' }}</dd>
-        <dt class='event__date--duration'>duration:</dt><dd>{{ thisEvent.duration || 'n/a' }} Minutes</dd>
-        <dt class='event__brief'>Brief:</dt><dd>{{ thisEvent.brief || 'n/a' }}</dd>
-        <button v-on:click.prevent="deleteEvent" >Delete Event</button>
-        <button v-on:click.prevent="modifyEvent" >Modify Event</button>
-    </dl>
+    <div class='event'>
+        <dl>
+            <dt class='event__title'>Name:</dt><dd>{{ thisEvent.name || 'n/a' }}</dd>
+            <dt class='event__date'>Date:</dt><dd>{{ jsDate.toLocaleDateString() || 'n/a' }}</dd>
+            <dt class='event__date--time'>Time:</dt><dd>{{ jsDate.toLocaleTimeString() || 'n/a' }}</dd>
+            <dt class='event__date--duration'>Duration:</dt><dd>{{ thisEvent.duration || 'n/a' }} Minutes</dd>
+        </dl>
+        <p v-if="thisEvent.brief">{{ thisEvent.brief }}</p>
+        <div>
+            <button v-on:click.prevent="deleteEvent" >Delete Event</button>
+            <button v-on:click.prevent="modifyEvent" >Modify Event</button>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -24,7 +28,12 @@ export default {
     methods: {
         deleteEvent: function( evt ) {
             evt.preventDefault();
-            this.$store.dispatch( 'deleteEvent', this.thisEvent.id );
+            this.$store.dispatch( 'deleteEvent', this.thisEvent.id )
+            .then( res => {
+              this.$store.dispatch( 'getList' );
+            }).catch( ( err, body ) => {
+              this.$toasted.show( 'Error Deleting Event', { position: 'top-left', theme: 'bubble', type: 'error' } ).goAway( 2000 );
+            });
         },
         modifyEvent: function( evt ) {
             evt.preventDefault();
@@ -40,25 +49,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .event {
+    flex-basis:20em;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin:1em;
     padding:10px;
+    -webkit-box-shadow: 0px 0px 60px -13px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 60px -13px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 60px -13px rgba(0,0,0,0.25);
     text-align: left;
-    border-bottom:1px solid #CCC;
-    border-top:1px solid #CCC;
+    dt {
+        font-weight:bold;
+    }
     dt, dd {
-        padding:.125em 0;
-    }
-    dt{
         float:left;
-        clear:left;
-        margin-right:.5em;
-        dt, dd {
-            padding:.125em;
-        }
-        display: block;
+        padding:.5em .25em 0 0;
+        margin:0;
     }
-    dd {
-        text-align: left;
+    p, dt, div {
+        clear:left;
+    }
+    p {
         display: block;
+        padding: 1em 0 0;
+        margin: 0;
     }
     &__title{
         &, &+dd {
@@ -66,7 +80,7 @@ export default {
         }
     }
     button {
-        margin-top:.5em;
+        margin:1em .5em 0 0;
     }
 }
 </style>
