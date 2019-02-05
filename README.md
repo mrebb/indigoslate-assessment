@@ -19,7 +19,8 @@ Build the event management application for this client. The client wants to be a
 * Events should **not** overlap.
 * The schedule should span across 3 days.
 * Authenticate the Admin View to the Event API using Basic Authentication (Only a single set of credentials is necessary).
-* We've provided a partial front-end to help you get started.
+* We've provided a barebones front-end to help you get started. Feel free to adjust as necessary.
+    * Hint: The front-end we've provided is pretty bland...
 
 ## Notes/Hints
 * Carefully consider the problem before you code!
