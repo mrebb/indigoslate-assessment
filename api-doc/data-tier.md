@@ -12,7 +12,7 @@ All routes require two headers:
 Key | Value
 :--- | ---:
 Content-Type | application/json
-X-API-KEY | [Your API Key (API_KEY)]
+X-API-KEY | Your API Key (API_KEY)
 
 ## Endpoints Overview Table
 **base url:** https://crud-api.azurewebsites.net
