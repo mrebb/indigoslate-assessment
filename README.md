@@ -17,10 +17,10 @@ Build the event management application for this client. The client wants to be a
 * **Utilize the provided CRUD storage API as the data tier** for the Event API backend. ([api documentation](api-doc/data-tier.md))
     * Hint: Depending on how you structure your data, you may not need to use all of the provided endpoints!
 * Events should **not** overlap.
-* The schedule should span across 3 days.
+* Note that the schedule will span across 3 days.
 * Authenticate the Admin View to the Event API using Basic Authentication (Only a single set of credentials is necessary).
-* We've provided a barebones front-end to help you get started. Feel free to adjust as necessary.
-    * Hint: The front-end we've provided is pretty bland...
+* We've provided a front-end to help you get started. Feel free to adjust as necessary.
+    * Hint: The front-end we've provided is pretty bland... :sadface
 
 ## Notes/Hints
 * Carefully consider the problem before you code!
@@ -28,7 +28,7 @@ Build the event management application for this client. The client wants to be a
 * There are multiple ways to store the data needed. The endpoints of the data api are available for your use. You need not use all routes if you don't want to.
 * The front-end view is provided for ease, please don't feel restricted to the constraints that the current front-end has. If you don't like it, change it!
 * Consider this project to be 70% back-end, 30% front-end. We'd like to see your skills in both.
-* You are limited to the data api provided. Please do not create any additional data tiers.
+* **You are limited to the data api provided. Please do not create any additional data tiers.**
 * If you can't complete the problem, please submit what you have.
 * Once you've completed the project, upload it to your github account and then submit your work:
     * Note that once submitted, your API_KEY will be invalidated, please ensure you've thoroughly tested your work prior to submitting.
