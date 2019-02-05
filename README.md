@@ -1,6 +1,6 @@
 # Hiring Assessment for Prospective Engineering Candidates
 Thank you for taking the time to complete the Indigo Slate Engineering Team's full stack assessment!
-Feel free to spend as much or as little time as you'd like. This assessment is designed to take approximately 6 hours.
+Feel free to spend as much or as little time as you'd like. This assessment is designed to take approximately 4 hours.
 
 ## Data API
 **You should not create your own data tier for this project.** A data storage api has been provided for you, please reference this [api documentation](api-doc/data-tier.md). \
@@ -8,7 +8,7 @@ Feel free to spend as much or as little time as you'd like. This assessment is d
 **API_KEY is required**: If you do not already have an API key, please reach out to your contact at Indigo Slate to receive one.
 
 # Assessment Scenario
-An Indigo Slate client is hosting a three-day conference. The client is working with several vendors who will be scheduling presentations, panels, and interactive demos for the event. Indigo Slate has been tasked with creating a planning and scheduling app for the client. The app needs to consume the provided data API to house all of the data.
+An Indigo Slate client is hosting a three-day conference. The client is working with several vendors who will be scheduling presentations, panels, and interactive demos for the event. Indigo Slate has been tasked with creating a planning and scheduling app for the client. The app back-end must utilize the provided data API to house all of the data.
 
 ## Task
 Build the event management application for this client. The client wants to be able to configure events by using an admin panel where events can be added, removed, updated and read from a schedule.
