@@ -9,6 +9,7 @@ If the route requires a body, it must have a 'data' object in the body of the re
 
 ## Header Format
 All routes require two headers:
+
 Key | Value
 :--- | ---:
 Content-Type | application/json
