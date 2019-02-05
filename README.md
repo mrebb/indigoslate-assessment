@@ -1,6 +1,6 @@
 # Hiring Assessment for Prospective Engineering Candidates
 Thank you for taking the time to complete the Indigo Slate Engineering Team's full stack assessment!
-Feel free to spend as much or as little time as you'd like. Although we strongly suggest not taking more than 4 hours of your time.
+Feel free to spend as much or as little time as you'd like. This assessment is designed to take approximately 6 hours.
 
 ## Data API
 **You should not create your own data tier for this project.** A data storage api has been provided for you, please reference this [api documentation](api-doc/data-tier.md). \
@@ -21,10 +21,14 @@ Build the event management application for this client. The client wants to be a
 * Authenticate the Admin View to the Event API using Basic Authentication (Only a single set of credentials is necessary).
 * We've provided a partial front-end to help you get started.
 
-## Notes
+## Notes/Hints
+* Carefully consider the problem before you code!
+* There are many different ways to solve this problem. No one way is the best.
+* There are multiple ways to store the data needed. The endpoints of the data api are available for your use. You need not use all routes if you don't want to.
 * The front-end view is provided for ease, please don't feel restricted to the constraints that the current front-end has. If you don't like it, change it!
 * Consider this project to be 70% back-end, 30% front-end. We'd like to see your skills in both.
 * You are limited to the data api provided. Please do not create any additional data tiers.
+* If you can't complete the problem, please submit what you have.
 * Once you've completed the project, upload it to your github account and then submit your work:
     * Note that once submitted, your API_KEY will be invalidated, please ensure you've thoroughly tested your work prior to submitting.
     * **Submission URL**: [https://crud-api.azurewebsites.net]
