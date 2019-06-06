@@ -28,12 +28,12 @@ You will build the event management application for this client. The client want
 
 ### Notes/Hints
 * Carefully consider the requirements before you code.
-* There are many different ways to solve this problem. No one way is the best.
-* There are multiple ways to store event data. Multiple endpoints of the data api are available for your use. 
-    * Hint: Depending on how you choose to structure your data, you may not need to use all of the endpoints provided.
-* The front-end view is provided for ease, however do not feel constrained by its current set up. If you do not like it, please change it.
-* Consider this project to be 80% back-end, 20% front-end. We would like to see your skills in both.
+* There are multiple ways to solve this problem. No one way is the best.
 * You are limited to the data api provided. Please do not create any additional data tiers.
+* The front-end view is provided for ease, however do not feel constrained by its current set up. If you do not like it, please change it.
+* There are multiple ways to store event data, even with the data tier constraint. Multiple endpoints of the data api are available for your use. 
+    * Hint: Depending on how you choose to structure your data, you may not need to use all of the endpoints provided.
+* Consider this project to be 70% back-end, 30% front-end. We would like to see your skills in both.
 * If you are unable complete all of the requirements, please submit what you have.
 
 ### Submitting the Assessment
@@ -44,7 +44,7 @@ You will build the event management application for this client. The client want
 **If you have any additional questions about the application please reach out to your recruiter.**
 
 
-## Front-end Framework - Vue Js  (this repository)
+# Front-end Framework - Vue.js  (this repository)
 
 ### Project setup
 * Clone this repository
