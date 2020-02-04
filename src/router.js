@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Login from '@/components/login.vue'
 import Home from './views/home.vue'
 import EventEdit from './views/event-form.vue'
 
@@ -24,6 +25,11 @@ export default new Router({
             name: 'modify',
             props: true,
             component: EventEdit
-        }
+        },
+        {
+            path: '/*',
+            name: 'default',
+            component: Home
+        },
     ]
 })

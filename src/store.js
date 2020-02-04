@@ -6,17 +6,17 @@ import uuidv1 from 'uuid/v1';
 Vue.use(Vuex)
 
 import { API_ENDPOINT } from './config';
-import testData from '@/data/test-data';
 
 export default new Vuex.Store({
     state: {
-        // TODO don't use testData
-        events: testData,//{},
-        basicToken: false
+        events: {},
+        basicToken: window.localStorage.getItem('auth_token_events') || false
     },
     mutations: {
         submitBasicToken: function( state, token ) {
-            state.basicToken = `basic ${token}`;
+          const cookie = JSON.stringify(`basic ${token}`);
+          window.localStorage.setItem('auth_token_events', cookie);
+          state.basicToken = `basic ${token}`;
         },
         updateList: function( state, list ) {
             state.events = list;
@@ -48,11 +48,6 @@ export default new Vuex.Store({
           });
         },
         checkBasicToken: function( { commit, state }, token ) {
-
-          // TODO remove return, actually implement basic authentication
-            return;
-          // TODO end remove return
-
           return axios({
             method: 'GET',
             url: `${API_ENDPOINT}/check`,
@@ -60,17 +55,12 @@ export default new Vuex.Store({
           });
         },
         getList: function( { commit, state } ) {
-
-          // TODO remove return, actually implement endpoint
-            return;
-          // TODO end remove return
-
-          axios({
+          return axios({
             method: 'GET',
             url: `${API_ENDPOINT}/list`,
             headers: { authorization: state.basicToken }
           }).then( res => {
-            commit( 'updateList', res.data );
+            commit( 'updateList', res.data);
           });
         }
     }

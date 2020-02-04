@@ -49,6 +49,12 @@ export default {
             working: false
         }
     },
+    mounted: function(){
+        if(this.$router.history.current.path === "/modify" && Object.keys(this.thisEvent).length===0){
+            this.working = false;
+            this.$router.push( '/' );
+        }
+    },
     methods: {
         createEvent: function( evt ) {
             this.dispatchChange( evt, 'createEvent' );
